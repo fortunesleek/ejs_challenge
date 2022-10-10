@@ -1,0 +1,19 @@
+<%- include partials\header -%>
+<h2>Home</h2>
+<p><%=homeText%></p>
+
+<!-- for (var i=0; i<pushedTitle.length; i++) {
+      console.log(pushedTitle[i].title);%>
+     }  -->
+<!-- pushedTitle.forEach(post => console.log(post));  -->
+
+<% pushedTitle.forEach(function(post) { %>
+
+<h1><%=post.title %></h1>
+<p><%=post.post.substring(0,100) + " ..."%>
+    <a href="/posts/<%=post.title%>">Read More</a>
+</p>
+
+<% }); %>
+
+<%- include partials\footer -%>
